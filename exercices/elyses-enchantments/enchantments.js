@@ -60,7 +60,7 @@ return cards;
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemFromTop(cards) {
-cards.splice(cards.length - 1, 1);
+cards.pop();
 return cards;
 }
 
@@ -85,7 +85,7 @@ export function insertItemAtBottom(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemAtBottom(cards) {
-cards.splice(0, 1);
+cards.shift();
 return cards;
 }
 
