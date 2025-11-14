@@ -98,12 +98,5 @@ return cards;
  * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
 export function checkSizeOfStack(cards, stackSize) {
-if (cards.length == stackSize )
-{
-  return true;
-}
-else 
-{
-  return false;
-}
+return cards.length == stackSize;
 }
