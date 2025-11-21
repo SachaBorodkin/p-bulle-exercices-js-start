@@ -11,11 +11,7 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  if (kind === 'car' || kind === 'truck') {
-    return true;
-  } else {
-    return false;
-  }
+return kind === 'car' || kind === 'truck';
 }
 
 /**
@@ -43,9 +39,11 @@ export function chooseVehicle(option1, option2) {
  * @returns {number} expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
+  let finalPrice;
   if (age < 3) {
-    return originalPrice * 0.8;
+    finalPrice = originalPrice * 0.8;
   } else if (age >= 3 && age <= 10) {
-    return originalPrice * 0.7;
-  } else return originalPrice * 0.5;
+    finalPrice = originalPrice * 0.7;
+  } else finalPrice = originalPrice * 0.5;
+  return finalPrice;
 }
