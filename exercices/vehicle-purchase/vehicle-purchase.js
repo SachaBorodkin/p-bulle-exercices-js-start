@@ -44,6 +44,6 @@ export function calculateResellPrice(originalPrice, age) {
     finalPrice = originalPrice * 0.8;
   } else if (age >= 3 && age <= 10) {
     finalPrice = originalPrice * 0.7;
-  } else finalPrice = originalPrice * 0.5;
+  } else {finalPrice = originalPrice * 0.5;}
   return finalPrice;
 }
