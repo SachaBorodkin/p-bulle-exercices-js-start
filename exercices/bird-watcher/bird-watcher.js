@@ -27,7 +27,14 @@ number += birdsPerDay[i];
  * @returns {number} birds counted in the given week
  */
 export function birdsInWeek(birdsPerDay, week) {
-  throw new Error('Remove this line and implement the function');
+const DAYS_IN_WEEK = 7;
+const start = (week - 1) * DAYS_IN_WEEK;
+let number = 0;
+const end = start + DAYS_IN_WEEK;
+for(let i = start; i < end; i++){
+number += birdsPerDay[i];
+}
+return number;
 }
 
 /**
@@ -38,5 +45,10 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error('Remove this line and implement the function');
+for(let i = 0; i < birdsPerDay.length; i++)
+{
+  if(i % 2 == 0){
+    birdsPerDay[i] += 1;
+  }
+}
 }
