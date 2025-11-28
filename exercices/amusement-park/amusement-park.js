@@ -13,7 +13,7 @@ export function createVisitor(name, age, ticketId) {
     name,
     age,
     ticketId,
-  };
+  }; 
   return visitor;
 }
 
