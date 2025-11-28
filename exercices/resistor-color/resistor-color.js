@@ -1,10 +1,69 @@
-//
-// This is only a SKELETON file for the 'Resistor Color' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-export const colorCode = () => {
-  throw new Error('Remove this line and implement the function');
+/**
+ *
+ *
+ * @param {string} color
+ * @returns {number}
+ */
+export const colorCode = (color) => {
+  let lowercolor = color.toLowerCase();
+  let code;
+  switch (lowercolor) {
+    case "black": {
+      code = 0;
+      break;
+    }
+    case "brown": {
+      code = 1;
+       break;
+    }
+    case "red": {
+      code = 2;
+       break;
+    }
+    case "orange": {
+      code = 3;
+       break;
+    }
+    case "yellow": {
+      code = 4;
+       break;
+    }
+    case "green": {
+      code = 5;
+       break;
+    }
+    case "blue": {
+      code = 6;
+       break;
+    }
+    case "violet": {
+      code = 7;
+       break;
+    }
+    case "grey": {
+      code = 8;
+       break;
+    }
+    case "white": {
+      code = 9;
+       break;
+    }
+    default: {
+      code = null;
+    }
+  }
+  return code;
 };
 
-export const COLORS = undefined;
+export const COLORS = [
+  "black",
+  "brown",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "violet",
+  "grey",
+  "white",
+];
