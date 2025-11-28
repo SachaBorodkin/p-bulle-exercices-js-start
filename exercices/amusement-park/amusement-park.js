@@ -1,4 +1,3 @@
-
 // @ts-check
 
 /**
@@ -10,12 +9,12 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-let visitor = {
-  name: name,
-  age: age,
-  ticketId: ticketId,
-};
-return visitor;
+  let visitor = {
+    name,
+    age,
+    ticketId,
+  };
+  return visitor;
 }
 
 /**
@@ -25,8 +24,8 @@ return visitor;
  * @returns {Visitor} the visitor without a ticket
  */
 export function revokeTicket(visitor) {
-visitor.ticketId = null;
-return visitor;
+  visitor.ticketId = null;
+  return visitor;
 }
 
 /**
@@ -37,13 +36,13 @@ return visitor;
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
- if (!(ticketId in tickets)) {
-    return 'unknown ticket id';
+  if (!(ticketId in tickets)) {
+    return "unknown ticket id";
   }
-   if (tickets[ticketId] === null) {
-    return 'not sold';
+  if (tickets[ticketId] === null) {
+    return "not sold";
   }
-    return `sold to ${tickets[ticketId]}`;
+  return `sold to ${tickets[ticketId]}`;
 }
 
 /**
@@ -56,7 +55,7 @@ export function ticketStatus(tickets, ticketId) {
  */
 export function simpleTicketStatus(tickets, ticketId) {
   if (!(ticketId in tickets) || tickets[ticketId] === null) {
-    return 'invalid ticket !!!';
+    return "invalid ticket !!!";
   }
   return tickets[ticketId];
 }
