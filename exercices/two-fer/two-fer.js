@@ -1,8 +1,17 @@
-//
-// This is only a SKELETON file for the 'Two fer' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+/**
+ * 
+ *
+ * @param {string} name 
+ * @returns {string} 
+ */
 
-export const twoFer = () => {
-  throw new Error('Remove this line and implement the function');
+export const twoFer = (name) => {
+  let phrase = "";
+if (!name){
+  phrase = "One for you, one for me.";
+}
+else{
+  phrase = "One for " + name + ", one for me.";
+}
+return phrase;
 };
