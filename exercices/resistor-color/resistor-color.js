@@ -14,39 +14,39 @@ export const colorCode = (color) => {
     }
     case "brown": {
       code = 1;
-       break;
+      break;
     }
     case "red": {
       code = 2;
-       break;
+      break;
     }
     case "orange": {
       code = 3;
-       break;
+      break;
     }
     case "yellow": {
       code = 4;
-       break;
+      break;
     }
     case "green": {
       code = 5;
-       break;
+      break;
     }
     case "blue": {
       code = 6;
-       break;
+      break;
     }
     case "violet": {
       code = 7;
-       break;
+      break;
     }
     case "grey": {
       code = 8;
-       break;
+      break;
     }
     case "white": {
       code = 9;
-       break;
+      break;
     }
     default: {
       code = null;
