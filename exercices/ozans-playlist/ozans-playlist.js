@@ -11,7 +11,12 @@
  * @returns {string[]} new playlist with unique entries
  */
 export function removeDuplicates(playlist) {
-  throw new Error('Remove this line and implement the function');
+const timeSETday = new Set();
+for(let i = 0; i < playlist.length; i++){
+  timeSETday.add(playlist[i]);
+}
+let list = Array.from(timeSETday);
+return list;
 }
 
 /**
@@ -22,7 +27,14 @@ export function removeDuplicates(playlist) {
  * @returns {boolean} whether the track is in the playlist
  */
 export function hasTrack(playlist, track) {
-  throw new Error('Remove this line and implement the function');
+let set = new Set(playlist);
+const length = set.size;
+set.add(track);
+if(set.size == length)
+{
+  return true;
+}
+return false;
 }
 
 /**
@@ -33,7 +45,10 @@ export function hasTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function addTrack(playlist, track) {
-  throw new Error('Remove this line and implement the function');
+let set = new Set(playlist);
+set.add(track);
+let list = Array.from(set);
+return list;
 }
 
 /**
@@ -44,7 +59,10 @@ export function addTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function deleteTrack(playlist, track) {
-  throw new Error('Remove this line and implement the function');
+let set = new Set(playlist);
+set.delete(track);
+let list = Array.from(set);
+return list;
 }
 
 /**
