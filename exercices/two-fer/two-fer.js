@@ -6,12 +6,8 @@
  */
 
 export const twoFer = (name) => {
-  let phrase = "";
 if (!name){
-  phrase = "One for you, one for me.";
+  return "One for you, one for me.";
 }
-else{
-  phrase = "One for " + name + ", one for me.";
-}
-return phrase;
+  return "One for " + name + ", one for me.";
 };
