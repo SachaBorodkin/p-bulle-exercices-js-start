@@ -13,14 +13,8 @@
  * @returns {number} position of the card in the stack
  */
 export function getCardPosition(stack, card) {
-  for (let i = 0; i < stack.length; i++) {
-    if (card == stack[i]) {
-      return i;
-    } else {
-      return -1;
-    }
+ return stack.indexOf(card);
   }
-}
 
 /**
  * Determine if the stack contains the card
@@ -31,13 +25,13 @@ export function getCardPosition(stack, card) {
  * @returns {boolean} true if card is in the stack, false otherwise
  */
 export function doesStackIncludeCard(stack, card) {
-  for (let i = 0; i < stack.length; i++) {
-    if (card == stack[i]) {
+
+    if (stack.includes(card) ) {
       return true;
     }
     return false;
   }
-}
+
 
 /**
  * Determine if each card is even
