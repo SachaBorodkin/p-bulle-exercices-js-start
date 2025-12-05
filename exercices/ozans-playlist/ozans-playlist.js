@@ -69,12 +69,12 @@ export function deleteTrack(playlist, track) {
  * @returns {string[]} list of artists
  */
 export function listArtists(playlist) {
- let list = [];
-let song= "";
-for(let i = 0; i < playlist.length; i++) {
-song = playlist[i].split(" - ")[1];
-list.push(song);
-}
-let set = new Set(list);
-return Array.from(set);
+  let list = [];
+  let song = "";
+  for (let i = 0; i < playlist.length; i++) {
+    song = playlist[i].split(" - ")[1];
+    list.push(song);
+  }
+  let set = new Set(list);
+  return Array.from(set);
 }
