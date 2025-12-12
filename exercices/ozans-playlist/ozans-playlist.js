@@ -30,10 +30,7 @@ export function hasTrack(playlist, track) {
   let set = new Set(playlist);
   const length = set.size;
   set.add(track);
-  if (set.size == length) {
-    return true;
-  }
-  return false;
+  return (set.size == length);
 }
 
 /**
