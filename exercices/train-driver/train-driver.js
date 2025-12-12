@@ -41,11 +41,9 @@ export function fixListOfWagons(ids) {
  * @returns {number[]} corrected list of wagons
  */
 export function correctListOfWagons(ids, missingWagons) {
-/*let ersterZug = [1, ...missingWagons];
-let zweiterZug = [...ids];
-let drittenZug = zweiterZug.slice(0, 1);
-let list = [...ersterZug, ...drittenZug];
-return list;*/
+let id = [...ids]  
+id.shift();
+return( [1, ...missingWagons, ...id]);
 }
 
 /**
@@ -56,7 +54,7 @@ return list;*/
  * @returns {Record<string, string>} extended route information
  */
 export function extendRouteInformation(information, additional) {
-  throw new Error("Remove this line and implement the function");
+return {...information, ...additional};
 }
 
 /**
@@ -66,5 +64,7 @@ export function extendRouteInformation(information, additional) {
  * @returns {[string, Record<string, string>]} array with arrival time and object without arrival time
  */
 export function separateTimeOfArrival(information) {
-  throw new Error("Remove this line and implement the function");
+  const time = information.time; 
+  delete information.timeOfArrival;
+return [time, information]
 }
