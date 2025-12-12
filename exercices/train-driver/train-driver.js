@@ -64,7 +64,6 @@ return {...information, ...additional};
  * @returns {[string, Record<string, string>]} array with arrival time and object without arrival time
  */
 export function separateTimeOfArrival(information) {
-  const time = information.time; 
-  delete information.timeOfArrival;
-return [time, information]
+  const { timeOfArrival, ...rest } = information;
+  return [timeOfArrival, rest];
 }
