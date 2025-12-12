@@ -4,5 +4,12 @@
 //
 
 export const parallelLetterFrequency = async (texts) => {
-  throw new Error('Remove this line and implement the function');
+  const obj = {};
+  for (const text of texts){
+    for (const char of text) {
+      char = char.toLowerCase();
+        obj[char] = (obj[char] || 0) + 1;
+    }}
+    return obj;
+
 };
