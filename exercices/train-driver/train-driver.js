@@ -11,8 +11,7 @@
  * @returns {number[]} wagon ids
  */
 export function getListOfWagons(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
-  let list = [...arguments];
-  return list;
+  return [...arguments];
 }
 
 /**
@@ -27,10 +26,7 @@ export function fixListOfWagons(ids) {
     return [...ls];
   }
  
-  let el = ls.slice(0, 2);
-  let rm = ls.slice(2);
- 
-  return [...rm, ...el];
+return [...ls.slice(2), ...ls.slice(0, 2)];
 }
 
 /**
