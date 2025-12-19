@@ -21,12 +21,12 @@ export function getListOfWagons(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
  * @returns {number[]} reordered list of wagons
  */
 export function fixListOfWagons(ids) {
-  let ls = [...ids]
+  let ls = [...ids];
   if (ls.length < 2) {
     return [...ls];
   }
- 
-return [...ls.slice(2), ...ls.slice(0, 2)];
+
+  return [...ls.slice(2), ...ls.slice(0, 2)];
 }
 
 /**
@@ -37,9 +37,8 @@ return [...ls.slice(2), ...ls.slice(0, 2)];
  * @returns {number[]} corrected list of wagons
  */
 export function correctListOfWagons(ids, missingWagons) {
-let id = [...ids]  
-id.shift();
-return( [1, ...missingWagons, ...id]);
+  const id = [...ids];
+ return [id[0], ...missingWagons, ...id.slice(1)];
 }
 
 /**
@@ -50,7 +49,7 @@ return( [1, ...missingWagons, ...id]);
  * @returns {Record<string, string>} extended route information
  */
 export function extendRouteInformation(information, additional) {
-return {...information, ...additional};
+  return { ...information, ...additional };
 }
 
 /**

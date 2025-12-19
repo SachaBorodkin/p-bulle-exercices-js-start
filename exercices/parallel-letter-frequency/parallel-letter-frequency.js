@@ -6,11 +6,10 @@
 export const parallelLetterFrequency = async (texts) => {
  const frequencies = {};
   
-  // Convert input to a single array if it's just a string
-  const items = Array.isArray(input) ? input : [input];
+  const items = Array.isArray(texts) ? texts : [texts];
 
   items.forEach(str => {
-    // Normalize to lowercase and find all characters between a-z
+
     const letters = str.toLowerCase().match(/[a-z]/g);
 
     if (letters) {
