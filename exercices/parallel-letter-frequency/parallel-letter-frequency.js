@@ -6,7 +6,7 @@
 export const parallelLetterFrequency = async (texts) => {
   const obj = {};
   for (const text of texts){
-    for (const char of text) {
+    for (let char of text) {
       char = char.toLowerCase();
         obj[char] = (obj[char] || 0) + 1;
     }}

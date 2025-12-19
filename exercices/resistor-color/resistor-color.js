@@ -4,10 +4,6 @@
  * @param {string} color
  * @returns {number}
  */
-export const colorCode = (color) => {
-  const key = color.toLowerCase();
-  return COLORS.indexOf(key) ?? null;
-};
 export const COLORS = [
   "black",
   "brown",
@@ -20,3 +16,7 @@ export const COLORS = [
   "grey",
   "white",
 ];
+export const colorCode = (color) => {
+  const key = color.toLowerCase();
+  return COLORS.indexOf(key) ?? null;
+};
